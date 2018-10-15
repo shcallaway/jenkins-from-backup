@@ -4,21 +4,14 @@ Just so I don't forget, this is how you start Jenkins from an archived `JENKINS_
 
 ## Usage
 
-Create a container with Jenkins: 
+1. Create an image: `docker build . -t jenkins`
+2. Create and start the container with port 8080 exposed: `docker run -p 8080:8080 jenkins`
+3. Wait for Jenkins to start up.
+4. Visit `localhost:8080` in your browser.
 
-```
-docker build . -t jenkins
-```
+You should see a login page. This means that Jenkins started from an existing configuration. :tada:
 
-Start the container, exposing port 8080 to the host:
-
-```
-docker run -p 8080:8080 jenkins
-```
-
-Wait for Jenkins to start up. You can follow along with `docker logs jenkins -f`.
-
-Visit `localhost:8080` in your browser. You should be able to log in with the username "admin" and the password at `/var/jenkins_home/secrets/initialAdminPassword`. This is evidence that you are restoring Jenkins from an archive, rather than configuring a fresh installation!
+If you want to log in, the username is "admin" and the password is located at `/var/new_jenkins_home/secrets/initialAdminPassword` on the container filesystem.
 
 ## Caveat
 
