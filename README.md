@@ -1,6 +1,6 @@
 # Restore Jenkins from Archive
 
-Just so I don't forget, this is how you start Jenkins from an archived `JENKINS_HOME`.
+Just so I don't forget, this is how you start Jenkins from an archived `JENKINS_HOME`. This is necessary when you need to move the configuration for an existing Jenkins server to a new host.
 
 ## Usage
 
