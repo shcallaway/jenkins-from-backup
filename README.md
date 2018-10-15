@@ -1,4 +1,4 @@
-# Restore Jenkins
+# Restore Jenkins from Archive
 
 Just so I don't forget, this is how you start Jenkins from an archived `JENKINS_HOME`.
 
